@@ -1,4 +1,10 @@
-site_name: My Docs
+site_name: Music App
+repo_url: https://github.com/lvgalvao/musicApp
+repo_name: lvgalvao/musicApp
+edit_uri: tree/main/docs
 
 theme:
   name: material
+  language: pt-BR
+  logo: assets/logo.png
+  favicon: assets/logo.png

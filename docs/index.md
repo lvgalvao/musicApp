@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Tiktok brand track
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
