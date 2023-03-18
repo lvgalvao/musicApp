@@ -2,7 +2,7 @@
 AAA - 3A
 
 Arrenge - Act - Asserts!
-Arrumar - Agir - Garantir!
+Arrumar - Agir - Assegurar!
 """
 from pytest import raises
 from code.escalas import escala, ESCALAS, NOTAS
@@ -27,6 +27,19 @@ def test_deve_retornar_um_erro_dizendo_que_a_nota_nao_existe():
     with raises(ValueError) as error:
         escala(tonica, tonalidade)
     
-    assert error.value.args[0] == mensagem_de_erro
+    assert mensagem_de_erro == error.value.args[0]
 
+def test_deve_retotornar_um_erro_dizendo_que_a_escala_nao_existe():
 
+    tonica = 'c'
+    tonalidade = 'tonalidade'
+
+    mensagem_de_erro = (
+        'Essa escala não existe ou não foi implementada. '
+        f'Tente uma dessas {list(ESCALAS.keys())}'
+    )
+    
+    with raises(KeyError) as error:
+        escala(tonica, tonalidade)
+
+    assert mensagem_de_erro == error.value.args[0]
