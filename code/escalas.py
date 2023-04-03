@@ -45,4 +45,5 @@ def escala(tonica: str, tonalidade: str) -> dict[str, list[str]]:
         nota = (tonica_pos + intervalo) % 12
         temp.append(NOTAS[nota])
 
-    return {'notas': temp, 'graus': ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII']}
+    return {'notas': temp, 
+            'graus': ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII']}
