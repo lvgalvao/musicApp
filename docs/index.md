@@ -1,17 +1,51 @@
-# Tiktok brand track
+# Notas musicais
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## como usar?
 
-## Commands
+Você pode chamar as escalas via linha de comando. Por exemplo:
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+```bash
+poetry run escalas
 
-## Project layout
+┏━━━┳━━━━┳━━━━━┳━━━━┳━━━┳━━━━┳━━━━━┓
+┃ I ┃ II ┃ III ┃ IV ┃ V ┃ VI ┃ VII ┃
+┡━━━╇━━━━╇━━━━━╇━━━━╇━━━╇━━━━╇━━━━━┩
+│ C │ D  │ E   │ F  │ G │ A  │ B   │
+└───┴────┴─────┴────┴───┴────┴─────┘
+```
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### Alteração da tônica escala
+
+O primeiro parâmetro do CLI é a tônica da escala que deseja exibir. Desta forma, você pode alterar a escala retornada. Por exemplo, a escala de `F#`.
+
+```bash
+poetry run escalas F#
+```
+
+Resultado em 
+
+```bash
+┏━━━━┳━━━━┳━━━━━┳━━━━┳━━━━┳━━━━┳━━━━━┓
+┃ I  ┃ II ┃ III ┃ IV ┃ V  ┃ VI ┃ VII ┃
+┡━━━━╇━━━━╇━━━━━╇━━━━╇━━━━╇━━━━╇━━━━━┩
+│ F# │ G# │ A#  │ B  │ C# │ D# │ F   │
+└────┴────┴─────┴────┴────┴────┴─────┘
+```
+
+### Alteração na tonalidade da escala
+
+Você pode alterar a tonalidade da escala também! Esse é o segundo parâmetro.
+
+```bash
+poetry run escalas D# maior
+```
+
+Resultando em
+
+```bash
+┏━━━━┳━━━━┳━━━━━┳━━━━┳━━━━┳━━━━┳━━━━━┓
+┃ I  ┃ II ┃ III ┃ IV ┃ V  ┃ VI ┃ VII ┃
+┡━━━━╇━━━━╇━━━━━╇━━━━╇━━━━╇━━━━╇━━━━━┩
+│ D# │ F  │ G   │ G# │ A# │ C  │ D   │
+└────┴────┴─────┴────┴────┴────┴─────┘
+```

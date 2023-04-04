@@ -4,11 +4,16 @@ version = "0.1.0"
 description = ""
 authors = ["Luciano Filho <lvgalvaofilho@gmail.com>"]
 readme = "README.md"
+packages = [{include = 'code'}]
+
+[tool.poetry.scripts]
+escalas = "code.cli:app"
 
 [tool.poetry.dependencies]
 python = "^3.10"
 typer = "^0.7.0"
 rich = "^13.3.3"
+mkdocs-material = "^9.1.5"
 
 
 [tool.poetry.group.dev.dependencies]
