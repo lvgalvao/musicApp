@@ -49,3 +49,11 @@ Resultando em
 │ D# │ F  │ G   │ G# │ A# │ C  │ D   │
 └────┴────┴─────┴────┴────┴────┴─────┘
 ```
+
+## Mais informações sobre o CLI
+
+Para descobrir outras opções, você pode executar a flag `--help`
+
+```bash
+poetry run escalas --help
+```
