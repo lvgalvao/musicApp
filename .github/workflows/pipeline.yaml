@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Roda um comando!
-        run: echo $(pwd)
+      - name: Checkout
+        uses: actions/checkout@v2.7.0
 
       - name: Roda outro comando!
         run: echo $(ls)
