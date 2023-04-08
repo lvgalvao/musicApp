@@ -12,7 +12,13 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3.1.3
         with:
-          python-version: "3.10"
+          python-version: "3.11.2"
 
       - name: Add Poetry
         run: pip install poetry
+
+      - name: Run Poetry Install
+        run: poetry install --without doc
+
+      - name: Run tests
+        run: poetry run task test
